@@ -32,7 +32,6 @@ function App() {
   const [guesses, setGuesses] = useState(guessesQty)
   const [score, setScore] = useState(0)
 
-
   const pickWordAndCategory = useCallback(() => {
     // picking random category
     const categories = Object.keys(words)
