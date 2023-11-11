@@ -18,7 +18,7 @@ export default function Game({ verifyLetter, pickedWord, pickedCategory, letters
             <p className="points">
                 <span>Pontuação: {score}</span>
             </p>
-            <h1>Adivinhe a palavra:</h1>
+            <h1>Guess The Word</h1>
             <h3 className="tip">
                 Dica sobre a palavra: <span>{pickedCategory}</span>
             </h3>
@@ -39,7 +39,7 @@ export default function Game({ verifyLetter, pickedWord, pickedCategory, letters
                     <button type="submit">Jogar</button>
                 </form>
             </div>
-            <div className="wrong-letter-container">
+            <div className={`${wrongLetters.length ? 'wrong-letter-container' : 'hide'}`}>
                 <p>Letras já utilizadas:</p>
                 {wrongLetters.map((letter, index) => (
                     <span key={index} style={{marginLeft: '10px'}}>{letter}</span>
